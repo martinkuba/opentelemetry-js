@@ -1,9 +1,5 @@
-import { AttributeValue } from './Attributes';
+import { AttributeValue } from '@opentelemetry/api';
 
 export interface LogRecord {
-  setAttribute(key: string, value?: AttributeValue): this;
-}
-
-export interface Event {
   setAttribute(key: string, value?: AttributeValue): this;
 }

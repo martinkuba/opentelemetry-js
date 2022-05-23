@@ -1,7 +1,7 @@
 import { LogRecord } from './LogRecord';
-import { Attributes } from './Attributes';
+import { Attributes } from '@opentelemetry/api';
 
 export interface LogEmitter {
   emit(record: LogRecord): void;
-  addEvent(name: string, attributes: Attributes): void;
+  emitEvent(name: string, attributes: Attributes): void;
 }

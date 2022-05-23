@@ -35,5 +35,8 @@
   "devDependencies": {
     "typescript": "4.4.4",
     "webpack": "4.46.0"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "^1.1.0"
   }
 }
