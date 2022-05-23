@@ -1,8 +1,7 @@
 
-export * from './types/LogEmitter';
-export * from './types/LogEmitterProvider';
-export * from './types/LogRecord';
-export * from './types/Attributes';
+export * from './types/EventEmitter';
+export * from './types/EventEmitterProvider';
+export * from './types/Event';
 
-import LogsAPI from './api/logs';
+import LogsAPI from './api/events';
 export const logs = LogsAPI.getInstance();
