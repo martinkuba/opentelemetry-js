@@ -1,5 +1,5 @@
 import { Resource } from '@opentelemetry/resources';
-import LogEmitter from './LogEmitter';
+import { LogEmitter } from './LogEmitter';
 import { LogProcessor } from './LogProcessor';
 import { LogEmitterConfig } from './LogEmitterConfig';
 

@@ -6,7 +6,7 @@ import { LogEmitterProvider } from './LogEmitterProvider';
 import { hrTime, isTimeInput } from '@opentelemetry/core';
 import { TimeInput, Attributes } from '@opentelemetry/api';
 
-export default class LogEmitter {
+export class LogEmitter {
   readonly resource: Resource;
   readonly instrumentationLibrary: InstrumentationLibrary;
   readonly provider: LogEmitterProvider;

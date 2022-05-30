@@ -42,7 +42,7 @@ export default class LogsAPI {
     );
   }
 
-  public getLogEmitter(name: string, version?: string): EventEmitter {
+  public getEventEmitter(name: string, version?: string): EventEmitter {
     return this.getEventEmitterProvider().getEventEmitter(name, version);
   }
 }

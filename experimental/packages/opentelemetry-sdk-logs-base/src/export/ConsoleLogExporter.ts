@@ -6,7 +6,7 @@ import {
   hrTimeToMicroseconds
 } from '@opentelemetry/core';
 
-export default class ConsoleLogExporter implements LogExporter {
+export class ConsoleLogExporter implements LogExporter {
   export(
     logs: LogData[],
     resultCallback: (result: ExportResult) => void

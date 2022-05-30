@@ -2,7 +2,7 @@ import { LogProcessor } from "../LogProcessor";
 import { LogData } from "./LogData";
 import { LogExporter } from "./LogExporter";
 
-export default class SimpleLogProcessor implements LogProcessor {
+export class SimpleLogProcessor implements LogProcessor {
   constructor(private exporter: LogExporter) {
   } 
 
