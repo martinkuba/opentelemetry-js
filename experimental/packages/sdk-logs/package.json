@@ -1,6 +1,6 @@
 {
-  "name": "@opentelemetry/sdk-logs-base",
-  "version": "0.0.1",
+  "name": "@opentelemetry/sdk-logs",
+  "version": "0.31.0",
   "description": "OpenTelemetry logs SDK",
   "main": "build/esm/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/open-telemetry/opentelemetry-js#readme",
   "dependencies": {
-    "@opentelemetry/api-logs": "file:../opentelemetry-api-logs",
+    "@opentelemetry/api-logs": "0.31.0",
     "@opentelemetry/core": "1.2.0",
     "@opentelemetry/resources": "1.2.0"
   }
