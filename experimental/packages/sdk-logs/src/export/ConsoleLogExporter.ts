@@ -3,7 +3,6 @@ import { LogData } from "./LogData";
 import {
   ExportResult,
   ExportResultCode,
-  hrTimeToMicroseconds
 } from '@opentelemetry/core';
 
 export class ConsoleLogExporter implements LogExporter {
@@ -23,12 +22,12 @@ export class ConsoleLogExporter implements LogExporter {
     return Promise.resolve();
   }
 
-  private _exportInfo(log: LogData) {
+  private _exportInfo(data: LogData) {
     return {
-      traceId: log.logRecord.traceId,
-      spanId: log.logRecord.spanId,
-      timestamp: hrTimeToMicroseconds(log.logRecord.timestamp),
-      attributes: log.logRecord.attributes
+      traceId: data.logRecord.traceId,
+      spanId: data.logRecord.spanId,
+      timestamp: data.logRecord.timestamp,
+      attributes: data.logRecord.attributes
     };
   }
 }
