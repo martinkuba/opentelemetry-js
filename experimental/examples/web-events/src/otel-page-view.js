@@ -1,9 +1,6 @@
-import { EventEmitter } from '@opentelemetry/sdk-events';
+import { events } from '@opentelemetry/api-events';
 
-const logger = new EventEmitter({
-  name: 'navigation',
-  domain: 'browser'
-});
+const emitter = events.getEventEmitter('navigation', 'browser');
 
 window.addEventListener('load', () => {
   const entry = window.performance.getEntriesByType('navigation')[0];
@@ -17,7 +14,7 @@ window.addEventListener('load', () => {
     }
   }
 
-  logger.emit({
+  emitter.emit({
     name: 'navigation',
     attributes: attributes
   });

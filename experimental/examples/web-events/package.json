@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@opentelemetry/api-logs": "^0.35.1",
+    "@opentelemetry/api-events": "^0.35.1",
     "@opentelemetry/sdk-events": "^0.35.1",
     "@opentelemetry/sdk-logs": "^0.35.1",
     "@testing-library/jest-dom": "^5.16.5",

@@ -15,3 +15,4 @@
  */
 
 export * from './EventEmitter';
+export * from './EventEmitterProvider';
