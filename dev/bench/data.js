@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1690217298184,
+  "lastUpdate": 1693523706457,
   "repoUrl": "https://github.com/martinkuba/opentelemetry-js",
   "entries": {
     "Benchmark": [
@@ -108,6 +108,35 @@ window.BENCHMARK_DATA = {
             "range": "±0.83%",
             "unit": "ops/sec",
             "extra": "10 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Kuba",
+            "username": "martinkuba",
+            "email": "martin@martinkuba.com"
+          },
+          "committer": {
+            "name": "Martin Kuba",
+            "username": "martinkuba",
+            "email": "martin@martinkuba.com"
+          },
+          "id": "18d726b930f4c30d958839bccabdceaf3a4ed04a",
+          "message": "add workflow for testing",
+          "timestamp": "2023-08-31T22:34:23Z",
+          "url": "https://github.com/martinkuba/opentelemetry-js/commit/18d726b930f4c30d958839bccabdceaf3a4ed04a"
+        },
+        "date": 1693523705778,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "create spans (10 attributes)",
+            "value": 357939,
+            "range": "±0.58%",
+            "unit": "ops/sec",
+            "extra": "92 samples"
           }
         ]
       }
