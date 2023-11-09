@@ -1,0 +1,32 @@
+name: SBOM
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  merge_group:
+
+jobs:
+  node-tests:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    env:
+      NPM_CONFIG_UNSAFE_PERM: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: npm install -g npm@latest
+
+      - name: Bootstrap
+        run: npm ci
+
+      - name: Build 🔧
+        run: npm run compile
+
+      - uses: anchore/sbom-action@v0
