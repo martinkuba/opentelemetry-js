@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  node-tests:
+  sbom:
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest
