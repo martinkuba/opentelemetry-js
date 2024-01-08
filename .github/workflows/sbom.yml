@@ -26,8 +26,8 @@ jobs:
 
       - run: npm install -g npm@latest
 
-      # - name: Bootstrap
-      #   run: npm ci
+      - name: Bootstrap
+        run: npm ci
 
       # - name: Build 🔧
       #   run: npm run compile
@@ -35,7 +35,9 @@ jobs:
       - uses: anchore/sbom-action@v0
         with:
           path: ./api/
+          artifact-name: api.spdx.json
 
       - uses: anchore/sbom-action@v0
         with:
           path: ./packages/opentelemetry-core/
+          artifact-name: core.spdx.json
