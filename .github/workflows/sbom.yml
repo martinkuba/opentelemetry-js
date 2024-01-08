@@ -11,6 +11,8 @@ jobs:
   sbom:
     strategy:
       fail-fast: false
+      # matrix:
+      #   package: ['./api/', './packages/opentelemetry-core/']
     runs-on: ubuntu-latest
     env:
       NPM_CONFIG_UNSAFE_PERM: true
@@ -24,10 +26,16 @@ jobs:
 
       - run: npm install -g npm@latest
 
-      - name: Bootstrap
-        run: npm ci
+      # - name: Bootstrap
+      #   run: npm ci
 
-      - name: Build 🔧
-        run: npm run compile
+      # - name: Build 🔧
+      #   run: npm run compile
 
       - uses: anchore/sbom-action@v0
+        with:
+          path: ./api/
+
+      - uses: anchore/sbom-action@v0
+        with:
+          path: ./packages/opentelemetry-core/
