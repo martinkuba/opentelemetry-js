@@ -34,6 +34,11 @@ jobs:
 
       - uses: anchore/sbom-action@v0
         with:
+          path: ./
+          artifact-name: root.spdx.json
+
+      - uses: anchore/sbom-action@v0
+        with:
           path: ./api/
           artifact-name: api.spdx.json
 
@@ -41,3 +46,8 @@ jobs:
         with:
           path: ./packages/opentelemetry-core/
           artifact-name: core.spdx.json
+
+      - uses: anchore/sbom-action@v0
+        with:
+          path: ./experimental/packages/opentelemetry-sdk-node/
+          artifact-name: sdk-node.spdx.json
