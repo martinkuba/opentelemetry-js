@@ -14,13 +14,9 @@
  * limitations under the License.
  */
 
-import { Attributes } from '@opentelemetry/api';
+import { Entity as ApiEntity } from '@opentelemetry/api';
 
-export interface Entity {
-  type: string;
-  identifier: Attributes;
-  attributes: Attributes;
-  schemaUrl?: string;
+export interface Entity extends ApiEntity {
   asyncAttributesPending: boolean;
   waitForAsyncAttributes(): Promise<void>;
 }

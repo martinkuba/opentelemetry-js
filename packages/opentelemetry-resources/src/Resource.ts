@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-import { Attributes } from '@opentelemetry/api';
 import { RawResourceAttribute } from './types';
-import { Entity } from './entity';
+import { Resource as ApiResource } from '@opentelemetry/api';
 
 /**
  * An interface that represents a resource. A Resource describes the entity for which signals (metrics or trace) are
@@ -28,7 +27,7 @@ import { Entity } from './entity';
  *  - {@link defaultResource}
  *  - {@link detectResources}
  */
-export interface Resource {
+export interface Resource extends ApiResource {
   /**
    * Check if async attributes have resolved. This is useful to avoid awaiting
    * waitForAsyncAttributes (which will introduce asynchronous behavior) when not necessary.
@@ -36,16 +35,6 @@ export interface Resource {
    * @returns true if the resource "attributes" property is not yet settled to its final value
    */
   readonly asyncAttributesPending?: boolean;
-
-  /**
-   * @returns the Resource's attributes.
-   */
-  readonly attributes: Attributes;
-
-  /**
-   * @returns a list of Entities associated with the resource
-   */
-  readonly entities: Entity[];
 
   /**
    * Returns a promise that will never be rejected. Resolves when all async attributes have finished being added to

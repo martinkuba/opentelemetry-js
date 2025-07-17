@@ -113,6 +113,9 @@ export {
 } from './trace/invalid-span-constants';
 export type { TraceAPI } from './api/trace';
 
+export type { Entity } from './entities/Entity';
+export type { Resource } from './entities/Resource';
+
 // Split module-level variable definition into separate files to allow
 // tree-shaking on each api instance.
 import { context } from './context-api';
